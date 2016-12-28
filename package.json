@@ -1,0 +1,22 @@
+{
+  "name": "node-basics",
+  "version": "1.0.0",
+  "description": "learn node basics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sankoudai/node-basics.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "sankoudai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sankoudai/node-basics/issues"
+  },
+  "homepage": "https://github.com/sankoudai/node-basics#readme"
+}
