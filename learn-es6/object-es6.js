@@ -1,27 +1,27 @@
 const assert = require('assert');
 
 // 属性简写
-var birth = '2000/01/01';
-var person = {
+const birth = '2000/01/01';
+const person = {
     name: '张三',
 
-    //等同于birth: birth
+    // 等同于birth: birth
     birth,
 
     // 等同于hello: function ()...
     hello() {
         console.log('我的名字是', this.name);
-    }
+    },
 };
 
 person.hello();
 
 
 /* [] 用于属性定义 */
-let propKey = 'foo';
+const propKey = 'foo';
 let obj = {
     [propKey]: true,
-    ['a' + 'bc']: 123
+    ['a' + 'bc']: 123,
 };
 
 
@@ -30,8 +30,8 @@ function test_f() {
 }
 obj = {
     f: test_f,
-    g: function () {
-    }
+    g() {
+    },
 };
 assert.equal(obj.f.name, 'test_f');
 assert.equal(obj.g.name, 'g');
@@ -44,16 +44,16 @@ assert(!Object.is({}, {}));
 
 /* 对象合并:  只复制属性 */
 function test_assign() {
-    let target = {
+    const target = {
         a: 1,
-        b: 2
+        b: 2,
     };
 
-    let obj = {
+    const obj = {
         c: 3,
         d: 4,
-        f: function () {
-        }
+        f() {
+        },
     };
 
     assert(Object.assign(target, obj) === target);
@@ -65,10 +65,10 @@ test_assign();
 
 /* 遍历对象 */
 function test_iter() {
-    let {keys, values, entries} = Object;
-    let obj = {a: 1, b: 2, c: 3};
+    let { keys, values, entries } = Object;
+    const obj = {a: 1, b: 2, c: 3};
 
-    for (let key of keys(obj)) {
+    for (const key of keys(obj)) {
         console.log(key); // 'a', 'b', 'c'
     }
 }
